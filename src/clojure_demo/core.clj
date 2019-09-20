@@ -1,10 +1,7 @@
 (ns clojure-demo.core)
 (load "core_recursion")
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(load "core_functions")
+(load "core_objects")
 
 
 ; Recursion Demo
