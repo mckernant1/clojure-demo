@@ -1,7 +1,10 @@
 (in-ns 'clojure-demo.core)
 
+; Clojure Functions
+
+; Regular recursive function
 (defn powRecursive
-  "A recursive pow function"
+  "A Recursive pow function"
   [x y]
   (letfn [(powAcc
             [counter acc]
@@ -10,6 +13,7 @@
               :else (powAcc (- counter 1) (* acc x))))]
     (powAcc y 1)))
 
+; Tail Recursive function
 (defn powTailRecursive
   "A tail recursive pow function"
   [x y]
@@ -21,6 +25,7 @@
       :else (recur (- counter 1) (* acc x)))
     ))
 
+; Power generator
 (defn toPow
   "Creates a pow function for a particular power"
   [x]
