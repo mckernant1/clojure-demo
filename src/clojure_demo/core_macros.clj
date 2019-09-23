@@ -2,3 +2,26 @@
 
 ; Clojure Macros
 
+; Thread first macro
+
+; These two macros are also equivalent
+(->
+  (range 10)
+  (concat '(1))
+  )
+
+(as->
+  (range 10) input
+  (concat input '(1))
+  )
+
+; These two macros are equivalent
+(->>
+  (range 10)
+  (concat '(1))
+  )
+
+(as->
+  (range 10) input
+  (concat '(1) input)
+  )
