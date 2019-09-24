@@ -24,3 +24,12 @@
 #{1 2 3} ; #{1 3 2}
 (sort #{1 3 2}) ; (1 2 3)
 (sorted-set 2 3 1) ; #{1 2 3}
+
+
+; Maps
+
+(def myMap {:key "value", :a "b"})
+(:key myMap) ; "value"
+(sorted-map 1 :one, 3 :three, 2 :two)
+; {1 :one, 2 :two, 3 :three}
+

@@ -17,3 +17,6 @@
   "This is another anonymous function that says hello!"
   #(println "Hello," (clojure.string/join " " %&)))
 
+
+; Parameter deconstructing
+
