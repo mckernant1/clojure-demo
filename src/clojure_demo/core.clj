@@ -3,6 +3,5 @@
 (load "core_functions")
 (load "core_objects")
 (load "core_macros")
+(load "core_data_structures")
 
-; Recursion Demo
-(square 5)

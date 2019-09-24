@@ -1,6 +1,7 @@
 (in-ns 'clojure-demo.core)
 
 ; Clojure Functions
+(println "Functions")
 
 (defn example
   "I say hello to you!"

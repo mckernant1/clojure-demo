@@ -1,6 +1,7 @@
 (in-ns 'clojure-demo.core)
 
 ; Clojure Objects
+(println "Objects")
 
 ; Use Interfaces to define methods
 (defprotocol Person

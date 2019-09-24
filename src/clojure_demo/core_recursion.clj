@@ -1,6 +1,7 @@
 (in-ns 'clojure-demo.core)
 
 ; Clojure Recursion
+(println "Recursion")
 
 ; Regular recursive function
 (defn powRecursive

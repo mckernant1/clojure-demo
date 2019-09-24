@@ -1,6 +1,7 @@
 (in-ns 'clojure-demo.core)
 
 ; Clojure Macros
+(println "Macros")
 
 ; Thread first macro
 
