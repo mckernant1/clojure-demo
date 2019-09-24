@@ -4,7 +4,7 @@
 
 ; Thread first macro
 
-; These two macros are also equivalent
+; These two macros are equivalent
 (->
   (range 10)
   (concat '(1))
