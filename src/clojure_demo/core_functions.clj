@@ -20,3 +20,7 @@
 
 ; Parameter deconstructing
 
+(defn destruct
+  "This function deconstructs parameters"
+  [[x y & z]] (println x "and" y "and" z)
+  )
