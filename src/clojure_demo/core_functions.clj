@@ -24,3 +24,9 @@
   "This function deconstructs parameters"
   [[x y & z]] (str x " and " y " and " z)
   )
+
+; Partial Function application
+(def partialExample
+  (partial example "There")
+  )
+(partialExample "Tom")
