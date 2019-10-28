@@ -6,23 +6,41 @@
 ; Thread first macro
 
 ; These two macros are equivalent
-(->
-  (range 10)
-  (concat '(1))
-  )
+(def threadFirst (->
+                   (range 10)
+                   (concat '(10))
+                   (rest)
+                   ))
 
-(as->
-  (range 10) input
-  (concat input '(1))
-  )
+(def threadFirstAs (as->
+                     (range 10) input
+                     (concat input '(10))
+                     (rest input)
+                     ))
 
 ; These two macros are equivalent
-(->>
-  (range 10)
-  (concat '(1))
-  )
+(def threadLast (->>
+                  (range 10)
+                  (concat '(-1))
+                  (map inc)
+                  ))
 
-(as->
-  (range 10) input
-  (concat '(1) input)
-  )
+(def threadLastAs (as->
+                    (range 10) input
+                    (concat '(-1) input)
+                    (map inc input)
+                    ))
+
+; Some macro. Exits on nil. This will not error unlike ->
+(def threadSome (some->
+                  {:one 1, :two 2}
+                  (:three)
+                  (inc)
+                  ))
+
+; Cond macro. only applies the function if conditional is true
+(def threadCond (cond->
+                  (range 10)
+                  (= 5 5) (concat '(10))
+                  (= 5 4) (concat '(100))
+                  ))
