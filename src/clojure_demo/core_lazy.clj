@@ -2,11 +2,11 @@
 
 (println "Lazy")
 
-(defn fib-seq
-  ([] (fib-seq 0 1))
-  ([a b]
+(defn fibonacci
+  ([] (fibonacci 0 1))
+  ([prev2 prev1]
    (lazy-seq
-     (cons b (fib-seq b (+ a b)))
+     (cons prev1 (fibonacci prev1 (+ prev2 prev1)))
      ))
   )
 
