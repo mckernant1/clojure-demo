@@ -4,4 +4,5 @@
 (load "core_objects")
 (load "core_macros")
 (load "core_data_structures")
-
+(load "core_lazy")
+(load "core_control")

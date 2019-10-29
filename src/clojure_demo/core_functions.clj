@@ -25,6 +25,12 @@
   [[x y & z]] (str x " and " y " and " z)
   )
 
+; Function overloading
+(defn overloaded
+  ([x] (println x))
+  ([x y] (println x y))
+  )
+
 ; Partial Function application
 (def partialExample
   (partial example "There")
